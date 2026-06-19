@@ -1,6 +1,8 @@
 ## What is Ollama?
 
-Ollama is a lightweight software platform that allows users to down;oad, manage, and run Large Language Models (LLMs) locally on their computer. it provides a command-line interface (CLI), a local REST API, and model management tools, enabling developers to build AI applications without relying on cloud APIs once the model has been downloaded. It also supports offline execution for local models, making it suitable for privacy-focused and educational applications.
+Ollama is a lightweight software platform that allows users to down;oad, manage, and run Large Language Models (LLMs) locally on their computer.
+It provides a command-line interface (CLI), a local REST API, and model management tools, enabling developers to build AI applications without relying on cloud APIs once the model has been downloaded.
+It also supports offline execution for local models, making it suitable for privacy-focused and educational applications.
 
 Key Features
 
