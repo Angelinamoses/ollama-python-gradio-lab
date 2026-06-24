@@ -1,13 +1,7 @@
-import ollama
 from config import SYSTEM_PROMPT
+from conversation_memory import messages
+from ollama_client import get_response
 
-# Conversation Memory
-messages = [
-    {
-        "role": "system",
-        "content": SYSTEM_PROMPT
-    }
-]
 
 print("=" * 60)
 print("🤖 Health Informatics AI Assistant")
@@ -31,13 +25,8 @@ while True:
         }
     )
 
-    # Send Conversation History to Ollama
-    response = ollama.chat(
-        model="llama3.2",
-        messages=messages
-    )
+    assistant_reply = get_response(messages)
 
-    assistant_reply = response["message"]["content"]
 
     print("\n🤖 Assistant:")
     print(assistant_reply)
