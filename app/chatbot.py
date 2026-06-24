@@ -1,7 +1,13 @@
 import ollama
+from config import SYSTEM_PROMPT
 
 # Conversation Memory
-messages = []
+messages = [
+    {
+        "role": "system",
+        "content": SYSTEM_PROMPT
+    }
+]
 
 print("=" * 60)
 print("🤖 Health Informatics AI Assistant")
