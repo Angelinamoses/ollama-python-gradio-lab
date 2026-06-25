@@ -1,11 +1,11 @@
 import ollama
-from config import MODEL_NAME
+from config import AVAILABLE_MODELS
 
 
-def get_response(messages):
+def get_response(messages, model_name):
 
     response = ollama.chat(
-        model=MODEL_NAME,
+        model=model_name,
         messages=messages
     )
 

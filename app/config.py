@@ -1,4 +1,8 @@
-MODEL_NAME = "llama3.2"
+AVAILABLE_MODELS = {
+    "1": "llama3.2",
+    "2": "qwen3",
+    "3": "gemma3"
+}
 
 SYSTEM_PROMPT = """
 You are a Health Informatics Tutor.
