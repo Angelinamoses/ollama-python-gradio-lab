@@ -2,10 +2,10 @@ from config import AVAILABLE_MODELS
 from conversation_memory import messages
 from ollama_client import get_response
 
-
-print("=" * 60)
+LINE = "=" * 60
+print(LINE)
 print("🤖 Health Informatics AI Assistant")
-print("=" * 60)
+print(LINE)
 print("Type 'quit' or 'exit' to end the conversation.\n")
 
 
@@ -24,7 +24,7 @@ if choice not in AVAILABLE_MODELS:
 selected_model = AVAILABLE_MODELS[choice]
 
 print(f"\n✅ Using model: {selected_model}")
-print("-" * 60)
+print(LINE)
 
 question_count = 0
 
@@ -34,7 +34,7 @@ while True:
     user_question = input("\n👤 You: ").strip()
 
     if user_question.lower() in ["quit", "exit"]:
-        print("\n👋 Goodbye!")
+        print("\nEnding session...")
         break
     
     question_count += 1
@@ -60,11 +60,11 @@ while True:
             "content": assistant_reply
         }
     )
-print("=" * 60)
+print(LINE)
 print("Session Summary")
-print("=" * 60)
+print(LINE)
 
 print(f"Model Used      : {selected_model}")
 print(f"Questions Asked : {question_count}")
-print(f"Total Messages  : {len(messages)}")
-
+print(f"Total Messages  : {len(messages)-1}")
+print("\n👋 Thank you for using Health Informatics AI Assistant!")
