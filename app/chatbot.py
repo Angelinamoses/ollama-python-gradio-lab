@@ -46,10 +46,7 @@ while True:
         }
     )
 
-    assistant_reply = get_response(
-        messages,
-        selected_model
-    )
+    assistant_reply = " "
 
     print("\n🤖 Assistant:")
     print(assistant_reply)

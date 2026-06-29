@@ -6,7 +6,9 @@ def get_response(messages, model_name):
 
     response = ollama.chat(
         model=model_name,
-        messages=messages
+        messages=messages,
+        stream=True
     )
 
-    return response["message"]["content"]
+    for chunk in response:
+     yield chunk["message"]["content"]
